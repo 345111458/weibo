@@ -25,5 +25,15 @@ class UsersController extends Controller{
     }
 
 
+    //用于处理用户创建的相关逻辑。
+    public function store(Request $request){
+
+        $this->validate($request , [
+            'name' => 'required|max:50',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required|confirmed|min:6'
+        ]);
+    }
+
 
 }
