@@ -30,4 +30,5 @@ Route::post('login','SessionsController@store')->name('login');
 Route::delete('logout','SessionsController@destroy')->name('logout');
 
 
+Route::get('/users/{user}/edit','UsersController@edit')->name('users.edit');
 
