@@ -58,4 +58,11 @@ class User extends Authenticatable
             $user->activation_token = str_random(30);
         });
     }
+
+
+    // 多对多 绑定
+    public function statuses(){
+
+        return $this->hasMany(Status::class);
+    }
 }
