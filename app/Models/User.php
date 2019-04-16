@@ -60,7 +60,7 @@ class User extends Authenticatable
     }
 
 
-    // 多对多 绑定
+    // 多对多 绑定模型
     public function statuses(){
 
         return $this->hasMany(Status::class);
