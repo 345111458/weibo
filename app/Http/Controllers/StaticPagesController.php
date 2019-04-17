@@ -10,6 +10,11 @@ class StaticPagesController extends Controller{
     //
     public function home(){
         $feed_items = [];
+
+        // echo '<pre>';
+        // print_r(Auth::user()->feed()->get()->toArray());
+        // exit;
+
         if (Auth::check()) {
             $feed_items = Auth::user()->feed()->paginate(10);
         }
